@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-----META LINKS------->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-----BOOTSTRAP 5 CDN LINKS------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-----FONT AWESOME CDN LINK------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
+    <!-----CSS & JS FILE LINKS------->
+    <link rel="stylesheet" href="gallery.css">
+
+    <title>SHOPING PAGE</title>
+</head>
+<body>
+    <nav class="navbar  bg-dark navbar-dark">
+        <div class="container-fluid">
+    
+            <a href="#" class="navbar-brand">NAV.com</a>
+    
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#demo"><span class="navbar-toggler-icon"></span></button>
+    
+          <div id="demo" class="collapse  navbar-collapse"> 
+    
+           <ul class="navbar-nav me-auto">
+<li class="nav-item">
+    <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#welcome">My Cart <i class="fa-solid fa-cart-shopping"></i></a></li>           <li class="nav-item dropdown"><a href="#"class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Products in my Cart <i class="fa-solid fa-bag-shopping"></i></a>
+              <ul class="dropdown-menu cart-dropdown-list">
+                <!-- <li><a href="#"  class="dropdown-item">A</a></li>
+                <li><a href="#"  class="dropdown-item">B</a></li>
+                <li><a href="#"  class="dropdown-item">C</a></li> -->
+              </ul>
+        </li>
+           <li class="nav-item"><a class="nav-link text-white" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">
+            My Account <i class="fa-solid fa-user"></i></a></li>
+       
+        </ul>
+          <form class="d-flex">
+            <input type="text" placeholder="Search Product" class="form-control me-2"  id="productSearch">
+            <button class="btn btn-danger" id="searchBtn">Close</button>
+          </form>
+    
+        </div>
+        </div>
+       </nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4 product" style="height: 550px; width: 422px; "  data-name="BLACK SHOE">
+            <div style="height: 250px; width: 320px;">
+                <img src="https://m.media-amazon.com/images/I/61zTKgSpLiS._AC_SY695_.jpg" height="200" width="380" class="rounded pic p-4 zoom-img"> 
+
+            </div>
+            <div style="height: 100px; width: 320px;">
+                               <h2>BLACK SHOE</h2>
+                <h3>RS 40,000</h3>
+            </div>
+            <div style="height: 150px; width: 320px;">
+                <p><i>Here is the pefect design for you inspired by modern and trendy looks. Step into comfort and style with our latest shoe collection! Elevate your everyday look and embrace every adventure. 👟✨</i></p>
+            </div>
+            <div style="height: 40px; width: 320px;">
+               
+<button class="btn btn-outline-danger btn-sm" onclick='addToCart("BLACK SHOE", 40000, "img1.jpg")'>BUY</button>
+                <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#view1">VIEW</button>
+
+
+            </div>
+        </div>
+
+
+        <div class="col-lg-4 product" style="height: 550px; width: 422px;" data-name="LIGHT BLACK SHOE">
+
+            <div style="height: 250px; width: 320px;">
+                <img src="https://m.media-amazon.com/images/I/71Msnk5-q7L._AC_UL480_FMwebp_QL65_.jpg" height="200" width="380" class="rounded pic p-4 zoom-img"> 
+
+            </div>
+            <div style="height: 100px; width: 320px;">
+                               <h2>LIGHT BLACK SHOE</h2>
+                <h3>RS 86,000</h3>
+            </div>
+            <div style="height: 150px; width: 320px;">
+            <p><i>
+            Step up your game with every stride,In shoes where comfort and style collide.From streets to dreams, leave your mark, Because bold steps always spark.
+            </i></p>
+            </div>
+            <div style="height: 40px; width: 320px;">
+<button class="btn btn-outline-danger btn-sm" onclick='addToCart("LIGHT BLACK SHOE", 86000, "pic 2.webp")'>BUY</button>
+                <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#view2">VIEW</button>
+            </div>
+
+        </div>
+        <div class="col-lg-4 product" style="height: 550px; width: 420px;" data-name="WHITE SHOE">
+
+            <div style="height: 250px; width: 320px;">
+                <img src="https://m.media-amazon.com/images/I/61XOYhnXeOL._AC_UL480_FMwebp_QL65_.jpg" height="200" width="380" class="rounded pic p-4 zoom-img"> 
+
+            </div>
+            <div style="height: 100px; width: 320px;">
+                                               <h2>WHITE SHOE</h2>
+                <h3>RS 70,000</h3>
+            </div>
+            <div style="height: 150px; width: 320px;">
+                <p><i>
+                    Every journey starts with a single pair, Laced with courage, beyond compare. Walk through storms, chase the sun, In these shoes, you're second to none.
+                    </i></p>
+            </div>
+            <div style="height: 40px; width: 320px;">
+<button class="btn btn-outline-danger btn-sm" onclick='addToCart("WHITE SHOE", 70000, "pic 3.webp")'>BUY</button>
+                <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#view3">VIEW</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!----ROW 2----->
+    <div class="row">
+        <div class="col-lg-4 product" style="height: 550px; width: 422px;" data-name="BLACK STRAP SHOE">
+            <div style="height: 250px; width: 320px;">
+                <img src="https://m.media-amazon.com/images/I/41Jhn7-62eL._AC_UL480_FMwebp_QL65_.jpg" height="200" width="380" class="rounded pic p-4 zoom-img"> 
+
+            </div>
+            <div style="height: 100px; width: 320px;">
+                               <h2>BLACK STRAP SHOE</h2>
+
+                <h3>RS 12,000</h3>
+            </div>
+            <div style="height: 150px; width: 320px;">
+                <p><i>Here is the pefect design for you inspired by modern and trendy looks. Step into comfort and style with our latest shoe collection! Elevate your everyday look and embrace every adventure. 👟✨</i></p>
+            </div>
+            <div style="height: 40px; width: 320px;">
+<button class="btn btn-outline-danger btn-sm" onclick='addToCart("BLACK STRAP SHOE", 12000, "pic 4.webp")'>BUY</button>
+                <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#view4">VIEW</button>
+            </div>
+        </div>
+
+
+        <div class="col-lg-4 product" style="height: 550px; width: 422px; " data-name="MULTI COLOR SHOE">
+
+            <div style="height: 250px; width: 320px;">
+                <img src="https://m.media-amazon.com/images/I/71fyJbANPeL._AC_UL480_FMwebp_QL65_.jpg" height="200" width="380" class="rounded pic p-4 zoom-img"> 
+
+            </div>
+            <div style="height: 100px; width: 320px;">
+                               <h2>MULTI COLOR SHOE</h2>
+
+                <h3>RS 34,000</h3>
+            </div>
+            <div style="height: 150px; width: 320px;">
+            <p><i>
+            Step up your game with every stride,In shoes where comfort and style collide.From streets to dreams, leave your mark, Because bold steps always spark.
+            </i></p>
+            </div>
+            <div style="height: 40px; width: 320px;">
+<button class="btn btn-outline-danger btn-sm" onclick='addToCart("MULTI COLOR SHOE", 34000, "pic5.webp")'>BUY</button>
+                <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#view5">VIEW</button>
+            </div>
+
+        </div>
+        <div class="col-lg-4 product" style="height: 550px; width: 420px; "data-name="BLACK HEIGHT SHOE">
+
+            <div style="height: 250px; width: 320px;">
+                <img src="https://m.media-amazon.com/images/I/71OkAxoW83L._AC_UL480_FMwebp_QL65_.jpg" height="200" width="380" class="rounded pic p-4 zoom-img"> 
+
+            </div>
+            <div style="height: 100px; width: 320px;">
+                               <h2>BLACK HEIGHT SHOE</h2>
+
+                <h3>RS 55,000</h3>
+            </div>
+            <div style="height: 150px; width: 320px;">
+                <p><i>
+                    Every journey starts with a single pair, Laced with courage, beyond compare. Walk through storms, chase the sun, In these shoes, you're second to none.
+                    </i></p>
+            </div>
+            <div style="height: 40px; width: 320px;">
+<button class="btn btn-outline-danger btn-sm" onclick='addToCart("BLACK HEIGHT SHOE", 55000, "pic 6.webp")'>BUY</button>
+                <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#view6">VIEW</button>
+            </div>
+        </div>
+    </div>  
+</div>
+
+
+<!-----------------------------------------OFF CANVAS------------------------------------->
+
+<div class="offcanvas bg-dark text-white offcanvas-start " tabindex="-1" id="offcanvasExample">
+    <div class="offcanvas-header"><h3 class="offcanvas-title">Sign-In Here</h3>
+        <button type="button" class="btn btn-close" data-bs-dismiss="offcanvas"></button></div>
+  <div class="offcanvas-body">
+    <H5 class="text-success"><b>Hey User!</i></b> </H5>
+               <i >Welcome to Skyz
+                At Skyz, we believe in reaching new heights in quality, innovation, and style. Dedicated to creating exceptional products that empower and inspire, we combine modern design with functionality to meet the needs of our diverse, forward-thinking community. Whether you're looking for everyday essentials, cutting-edge technology, or lifestyle products, Skyz is here to elevate your experience with uncompromising standards and thoughtful craftsmanship. Join us as we continue to push boundaries and make life’s journey more vibrant, connected, and memorable. Welcome to the Skyz experience—where your aspirations take flight!</i>
+             <br><br>
+            <!-- Login Form (Initially Visible) -->
+            <div id="loginSection">
+                <h5 class="text-success"><b>SKYZ LOGIN FORM</b> <i class="fa-solid fa-user"></i></h5>
+                <form id="loginForm" novalidate>
+                    <label class="form-label">Enter your Name:</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fa-solid fa-signature"></i></span>
+                        <input type="text" id="name" placeholder="Name" class="form-control" required>
+                    </div>
+    
+                    <label class="form-label">Enter your Location:</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fa-solid fa-location-arrow"></i></span>
+                        <input type="text" id="location" placeholder="Location" class="form-control" required>
+                    </div>
+    
+                    <label class="form-label">Enter your Email:</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+                        <input type="email" id="email" placeholder="Email" class="form-control" required>
+                    </div>
+    
+                    <label class="form-label">Enter your Username:</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                        <input type="text" id="username" placeholder="Username" class="form-control" required>
+                    </div>
+                    <br>
+                    <button type="button" onclick="loginUser()" class="btn btn-primary">Submit</button>
+                    <button type="button" class="btn btn-danger ms-2" data-bs-dismiss="offcanvas">Close</button>
+                </form>
+            </div>
+    
+            <!-- Account Section (Initially Hidden) -->
+       <div id="accountSection" style="display: none; padding: 20px; background-color: #f9f9f9; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin-top: 20px;">
+        <h5 class="text-success" style="font-weight: bold; margin-bottom: 20px;">Your Account</h5>
+        <div style="border-bottom: 1px solid #ddd; padding-bottom: 15px; margin-bottom: 15px;">
+            <p style="margin: 5px 0;" class="text-dark"><strong>Name:</strong> <span id="accountName" style="color: #333;"></span></p>
+            <p style="margin: 5px 0;" class="text-dark"><strong>Location:</strong> <span id="accountLocation" style="color: #333;"></span></p>
+            <p style="margin: 5px 0;"class="text-dark"><strong>Email:</strong> <span id="accountEmail" style="color: #333;"></span></p>
+            <p style="margin: 5px 0;"class="text-dark"><strong>Username:</strong> <span id="accountUsername" style="color: #333;"></span></p>
+        </div>
+        <button type="button" onclick="logoutUser()" class="btn btn-danger" style="width: 100%; font-weight: bold;">Logout</button>
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+        <div class="modal fade" id="welcome" tabindex="-1" aria-labelledby="welcomeLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title" id="welcomeLabel">Your Cart</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="cartItemsContainer">
+        <!-- Cart items will appear here -->
+      </div>
+      <div class="modal-footer justify-content-between">
+        <h5>Total: <span id="totalBill">Rs 0</span></h5>
+        <button type="button" class="btn btn-primary done-btn">Done</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+<!-- Example for view1 -->
+<div class="modal fade" id="view1" data-bs-backdrop="static">
+  <div class="modal-dialog modal-fullscreen modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title">Product Zoom View</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="img-zoom-container">
+          <img id="mainImg1" src="pic.jpg" alt="Product 1" class="zoomable-img img-fluid" />
+          <div id="zoomResult1" class="img-zoom-result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- MODAL for view 2-->
+ <div class="modal fade" id="view2" data-bs-backdrop="static">
+  <div class="modal-dialog modal-fullscreen modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title">Product Zoom View</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="img-zoom-container">
+          <img id="mainImg2" src="pic 2.webp" alt="Product 2" class="zoomable-img img-fluid" />
+          <div id="zoomResult2" class="img-zoom-result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- MODAL for view 3-->
+ <div class="modal fade" id="view3" data-bs-backdrop="static">
+  <div class="modal-dialog modal-fullscreen modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title">Product Zoom View</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="img-zoom-container">
+          <img id="mainImg3" src="pic 3.webp" alt="Product 3" class="zoomable-img img-fluid" />
+          <div id="zoomResult3" class="img-zoom-result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- MODAL for view 4-->
+ <div class="modal fade" id="view4" data-bs-backdrop="static">
+  <div class="modal-dialog modal-fullscreen modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title">Product Zoom View</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="img-zoom-container">
+          <img id="mainImg4" src="pic 4.webp" alt="Product 4" class="zoomable-img img-fluid" />
+          <div id="zoomResult4" class="img-zoom-result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- MODAL for view 5-->
+<div class="modal fade" id="view5" data-bs-backdrop="static">
+  <div class="modal-dialog modal-fullscreen modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title">Product Zoom View</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="img-zoom-container">
+          <img id="mainImg5" src="pic5.webp" alt="Product 5" class="zoomable-img img-fluid" />
+          <div id="zoomResult5" class="img-zoom-result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- Modal for View 6 -->
+<div class="modal fade" id="view6" data-bs-backdrop="static">
+  <div class="modal-dialog modal-fullscreen modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title">Product Zoom View</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="img-zoom-container">
+          <img id="mainImg6" src="pic 6.webp" alt="Product 6" class="zoomable-img img-fluid" />
+          <div id="zoomResult6" class="img-zoom-result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault(); 
+
+    const name = document.getElementById("name").value.trim();
+    const location = document.getElementById("location").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const username = document.getElementById("username").value.trim();
+
+    if (!name || !location || !email || !username) {
+        alert("Please fill in all fields.");
+        return;
+    }
+
+    alert(`Welcome ${name}! You have successfully logged in.`);
+
+    document.getElementById("loginForm").reset();
+});
+</script>
+<script src="gallery.js"></script>
+</body>
+</html>
